@@ -14,18 +14,30 @@ $ sbt run
 $ sbt assembly
 
 # STEP 4) run the spark word count via spark submit 
-$ spark-submit /Users/jerryliu/spark-scala-word-count/target/scala-2.11/spark-scala-word-count-assembly-1.0.jar
+$ spark-submit /Users/$USER/spark-scala-word-count/target/scala-2.11/spark-scala-word-count-assembly-1.0.jar
 
 ```
 
 ### Quick start (Docker)
 ```bash 
-
-
+# STEP 0) 
 $ git clone https://github.com/yennanliu/spark-scala-word-count.git
+
+# STEP 1) 
 $ cd spark-scala-word-count
-# docker build 
+
+# STEP 2) docker build 
 $ docker build . -t spark_env
+
+# STEP 3) run the docker env and sbt compile and sbt run and assembly in one command 
+$ docker run  --mount \
+type=bind,\
+source="$(pwd)"/.,\
+target=/spark-word-count \
+-i -t spark_env \
+/bin/bash  -c "cd ../spark-word-count && sbt clean compile && sbt run && sbt assembly && spark-submit /spark-word-count/target/scala-2.11/spark-scala-word-count-assembly-1.0.jar"
+
+# STEP 3') : STEP BY STEP : access docker -> sbt clean compile -> sbt run -> sbt assembly -> spark-submit 
 # docker run 
 $ docker run  --mount \
 type=bind,\
@@ -34,7 +46,8 @@ target=/spark-word-count \
 -i -t spark_env \
 /bin/bash 
 # inside docker bash 
-root@942744030b57:~#  cd ../spark-word-count && sbt clean compile && sbt run 
+root@942744030b57:~ cd ../spark-word-count && sbt clean compile && sbt run 
+root@942744030b57:~ spark-submit /spark-word-count/target/scala-2.11/spark-scala-word-count-assembly-1.0.jar
 
 ```
 
