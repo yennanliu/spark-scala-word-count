@@ -10,7 +10,9 @@ Simple word count example running on mesos
 
 object WordCount extends App{
   val config = ConfigFactory.load()
-  val filePath = config.getString("file_path")
+  // modify file_path from config.getString to hardcode here 
+  //val filePath = config.getString("file_path")
+  val filePath = "src/main/resources/sample.txt"
   val sparkMaster = config.getString("SPARK_MASTER")
   val sparkAppName = config.getString("SPARK_APPNAME")
 
