@@ -1,3 +1,0 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/Users/yennanliu/spark-scala-word-count/src/main/resources/application.conf,/Users/yennanliu/spark-scala-word-count/target/scala-2.11/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/Users/yennanliu/spark-scala-word-count/src/main/resources/sample.txt,/Users/yennanliu/spark-scala-word-count/target/scala-2.11/classes/sample.txt)[0m
