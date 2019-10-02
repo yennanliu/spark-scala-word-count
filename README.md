@@ -1,24 +1,24 @@
-### spark-scala-word-count
-- dev 
+<h1 align="center">SPARK-SCALA-WORD-COUNT</h1>
+<h4 align="center">A simplist demo on how to write, compile, export, and run a spark word count job via spark scala with sbt tool </h4>
 
 
-### Quick start
+## Quick start
 ```bash
 # STEP 1) download the used dependencies.
 $ sbt clean compile
 
-# STEP 2) run app locally
+# STEP 2) run spark word count via `sbt run`
 $ sbt run
 
 # STEP 3) create jars from spark scala scriots 
 $ sbt assembly
 
-# STEP 4) run the spark word count via spark submit 
+# STEP 4) run spark word count via `spark submit`
 $ spark-submit /Users/$USER/spark-scala-word-count/target/scala-2.11/spark-scala-word-count-assembly-1.0.jar
 
 ```
 
-### Quick start (Docker)
+## Quick start (Docker)
 ```bash 
 # STEP 0) 
 $ git clone https://github.com/yennanliu/spark-scala-word-count.git
@@ -29,7 +29,7 @@ $ cd spark-scala-word-count
 # STEP 2) docker build 
 $ docker build . -t spark_env
 
-# STEP 3) run the docker env and sbt compile and sbt run and assembly in one command 
+# STEP 3) ONE COMMAND : run the docker env and sbt compile and sbt run and assembly once 
 $ docker run  --mount \
 type=bind,\
 source="$(pwd)"/.,\
