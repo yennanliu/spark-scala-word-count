@@ -1,9 +1,12 @@
 <h1 align="center">SPARK-SCALA-WORD-COUNT</h1>
-<h4 align="center">A simplist demo on how to write, compile, export, and run a spark word count job via spark scala with sbt tool </h4>
+<h5 align="center">A simplist demo on how to write, compile, export, and run a spark word count job via spark scala with sbt tool </h5>
 
 
-## Quick start
+## Quick Start
 ```bash
+# STEP 0) 
+$ git clone https://github.com/yennanliu/spark-scala-word-count.git && cd spark-scala-word-count 
+
 # STEP 1) download the used dependencies.
 $ sbt clean compile
 
@@ -18,7 +21,7 @@ $ spark-submit /Users/$USER/spark-scala-word-count/target/scala-2.11/spark-scala
 
 ```
 
-## Quick start (Docker)
+## Quick Start (Docker)
 ```bash 
 # STEP 0) 
 $ git clone https://github.com/yennanliu/spark-scala-word-count.git
