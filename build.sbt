@@ -1,5 +1,5 @@
 
-name := "spark-on-mesos"
+name := "spark-scala-word-count"
 
 version := "1.0"
 
