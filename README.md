@@ -1,5 +1,5 @@
 <h1 align="center">SPARK-SCALA-WORD-COUNT</h1>
-<h5 align="center">A simplist demo on how to write, compile, export, and run a spark word count job via spark scala with sbt tool </h5>
+<h4 align="center">A simplist demo on how to write, compile, export, and run a spark word count job via spark scala with sbt tool </h4>
 
 
 ## Quick Start
