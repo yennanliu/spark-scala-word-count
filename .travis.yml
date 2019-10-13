@@ -4,8 +4,9 @@ language: scala
 
 services:
   - docker
-
+  
 script:
   - bash travis_build.sh
+
 after_success:
   - echo 'travis process completed!'
