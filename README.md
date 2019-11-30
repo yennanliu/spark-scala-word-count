@@ -49,7 +49,7 @@ target=/spark-word-count \
 -i -t spark_env \
 /bin/bash 
 # inside docker bash 
-root@942744030b57:~ cd ../spark-word-count && sbt clean compile && sbt run 
+root@942744030b57:~ cd ../spark-word-count && sbt clean compile && sbt assembly
 root@942744030b57:~ spark-submit /spark-word-count/target/scala-2.11/spark-scala-word-count-assembly-1.0.jar
 
 ```
@@ -57,4 +57,7 @@ root@942744030b57:~ spark-submit /spark-word-count/target/scala-2.11/spark-scala
 ### Reference 
 - https://github.com/mahesh2492/spark-on-mesos
 
+### Todo
+- Auto commit built jar to S3/github/slack
+- Auto run spark jar at cloud
 
